@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | BufferBuddy TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+<h1 class="pg">Architecture and feasibility</h1>
+<p class="lead">The goal is to entertain during interruptions, not to troubleshoot them.</p>
+<section><h2>How the code flows</h2>
+<div class="flow"><div class="node">Event sources<small>buttons, auto-demo, offline event</small></div><span class="arrow">&rarr;</span><div class="node">State machine<small>PLAYING or INTERRUPTED</small></div><span class="arrow">&rarr;</span><div class="node">Buddy registry<small>art and captions</small></div><span class="arrow">&rarr;</span><div class="node">Renderer<small>overlay on the TV</small></div><span class="arrow">&rarr;</span><div class="node">Session log<small>feeds Analytics</small></div></div></section>
+<section class="card"><h2>What can a Fire TV app detect?</h2><div class="wrap"><table>
+<tr><th>Situation</th><th>Likely to work</th><th>Why</th></tr>
+<tr><td>Your own player inside the app</td><td>Yes</td><td>An HTML5 video fires waiting, stalled, error and playing events.</td></tr>
+<tr><td>Device loses internet</td><td>Likely</td><td>Browsers expose online and offline events, and Fire OS has network-state APIs.</td></tr>
+<tr><td>Buffering inside Netflix or Prime Video</td><td>No</td><td>Apps are sandboxed, so another app’s player state is not visible without an official partner capability.</td></tr>
+</table></div><p class="mut" style="margin-top:10px">Check Amazon’s current Fire TV developer documentation for web app support and overlay rules before building further.</p></section>
+<section class="card"><h2>Roadmap</h2><ul><li>Wire a real video element into the state machine.</li><li>Replace SVG buddies with Lottie files.</li><li>Test on a Fire TV device or emulator with a real remote.</li></ul></section>
+</main>
+<script src="js/utils.js"></script>
+<script src="js/store.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>

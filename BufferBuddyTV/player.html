@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player | BufferBuddy TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+<h1 class="pg">Interruption player</h1>
+<p class="lead">Trigger an interruption, watch the buddy take over, then resume. Each finished interruption is saved for the Analytics page.</p>
+<div class="split"><div><div class="tv" id="tv" data-th="neon" aria-label="Simulated TV screen">
+  <div class="scene"><div class="now">Now playing</div><div class="ttl">Space Cats, Episode 4</div><div class="bar"><i></i></div></div>
+  <div class="hud"><span>Playing</span><span>Entertained for <b>0s</b></span></div>
+  <div class="ov" role="status" aria-live="polite"><span class="tag"></span><div class="stage"></div><div class="cap"></div></div>
+</div><h3>Session feed</h3><ol id="feed" class="feed"></ol></div>
+<aside class="stack">
+<div class="card"><h2>Trigger</h2><div class="stack" id="evs"></div></div>
+<div class="card"><h2>Controls</h2><div class="stack"><button class="btn pri" id="resume">Resume playback</button><button class="btn" id="auto" aria-pressed="false">Auto-demo: off</button><button class="btn" id="bg" aria-pressed="false">Simulate app inactive</button></div></div>
+<p class="keys">Arrow keys move, Enter selects, Esc or Backspace resumes. Turn off your Wi-Fi to trigger the real offline event.</p>
+</aside></div>
+</main>
+<script src="js/utils.js"></script>
+<script src="js/store.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/remote.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>

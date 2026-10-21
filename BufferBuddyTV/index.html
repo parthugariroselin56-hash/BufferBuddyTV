@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | BufferBuddy TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+<section class="hero"><div>
+<h1>Make every wait worth watching.</h1>
+<p class="lead">BufferBuddy TV replaces spinners and error screens with short, lightweight animated moments whenever playback is interrupted. It does not fix your connection. It makes the wait easier to sit through.</p>
+<div class="row"><a class="btn pri" href="player.html">Open the player</a><a class="btn" href="about.html">Read the feasibility notes</a></div>
+</div><div class="tv" id="tv" data-th="neon" aria-label="Simulated TV screen">
+  <div class="scene"><div class="now">Now playing</div><div class="ttl">Space Cats, Episode 4</div><div class="bar"><i></i></div></div>
+  <div class="hud"><span>Playing</span><span>Entertained for <b>0s</b></span></div>
+  <div class="ov" role="status" aria-live="polite"><span class="tag"></span><div class="stage"></div><div class="cap"></div></div>
+</div></section>
+<section><h2>What is inside</h2><div class="grid">
+<a class="card" href="player.html"><h3>Interruption player</h3><p class="mut">Trigger buffering, Wi-Fi loss, slow connection and error events. Includes auto-demo and remote-style keyboard control.</p></a>
+<a class="card" href="characters.html"><h3>Buddy library</h3><p class="mut">Four animated characters. Choose which buddy appears for each type of interruption.</p></a>
+<a class="card" href="analytics.html"><h3>Analytics</h3><p class="mut">Every interruption is logged. See totals, averages, a seven-day chart and a CSV export.</p></a>
+<a class="card" href="settings.html"><h3>Settings</h3><p class="mut">Colour theme, animation speed, captions and auto-demo timing, saved on the device.</p></a>
+<a class="card" href="about.html"><h3>Architecture and feasibility</h3><p class="mut">How the code is organised, and what a Fire TV app can and cannot detect.</p></a>
+</div></section>
+<section class="card"><h2>An honest limit</h2><p class="mut">A regular app cannot see buffering inside Netflix or Prime Video. BufferBuddy works with signals it can really observe: its own player, and the device going offline.</p></section>
+</main>
+<script src="js/utils.js"></script>
+<script src="js/store.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

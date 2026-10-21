@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analytics | BufferBuddy TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+<h1 class="pg">Analytics</h1>
+<p class="lead">A record of every interruption the player has entertained on this device.</p>
+<div class="row"><button class="btn pri" id="sample">Load sample data</button><button class="btn" id="csv">Export CSV</button><button class="btn" id="clear">Clear log</button></div>
+<div class="kpis" id="kpis"></div>
+<div class="grid"><div class="card"><h2>By interruption type</h2><div id="byType"></div></div><div class="card"><h2>By buddy</h2><div id="byChar"></div></div></div>
+<section class="card"><h2>Last 7 days</h2><div class="days" id="days"></div></section>
+<section class="card"><h2>Recent interruptions</h2><div class="wrap"><table><thead><tr><th>Time</th><th>Event</th><th>Buddy</th><th>Length</th></tr></thead><tbody id="recent"></tbody></table></div></section>
+</main>
+<script src="js/utils.js"></script>
+<script src="js/store.js"></script>
+<script src="js/characters.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/analytics.js"></script>
+</body>
+</html>
